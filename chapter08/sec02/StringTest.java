@@ -7,6 +7,11 @@ public class StringTest {
 		String str2 = new String("hello");
 
 		System.out.println(str1 == str2);
+		System.out.println(str1.hashCode());
+		System.out.println(str2.hashCode());
+		System.out.println(System.identityHashCode(str1));
+		System.out.println(System.identityHashCode(str2));
+		System.out.println();
 
 		String str3 = "hello";
 		String str4 = "hello";
