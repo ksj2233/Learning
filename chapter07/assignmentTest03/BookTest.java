@@ -6,18 +6,21 @@ public class BookTest {
 
 	public static void main(String[] args) {
 
-		Book[] books = new Book[] { new Book(15000), new Book(50000), new Book(20000) };
+		int[] books = new int[] { 15000, 50000,20000 };
 //
 		System.out.println("정렬 전");
-//		
-//		for (int i = 0 ; 0 < books.length; i++) {
 
-		int a;
-		for (Book b : books) {
-			System.out.println(b);
-			a = b.getnum();
+		for (int b : books) {
+			b.show();
 		}
-////		System.out.println();
+		System.out.println();
+		
+//		Comparator<Book> cmp = new Comparator<Book>() {
+//
+//			public int compare(Book o1, Book o2) {
+//				return o1.length() - o2.length();
+//			}
+//		};
 		Arrays.sort(books);
 ////
 //////		System.out.println("정렬 후");

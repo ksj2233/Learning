@@ -15,15 +15,6 @@ public class Book {
 		System.out.printf("Book [price=%d]\n", price);
 	}
 
-	void sort(Book[] books) {
-		int temp = 0;
-		for (int i = 0; i < books.length; i++) {
-			if (books[i].getnum() > books[i + 1].getnum()) {
-				temp = books[i].getnum();
 
-			}
-
-		}
 	}
-}
 // 수정중
