@@ -2,7 +2,7 @@ package assignment07;
 
 import java.text.MessageFormat;
 
-public class MessageFormatTest {
+public class MessageFormatTest2 {
 //	<문제>
 //	실행 결과를 보고 다음 프로그램을 완성하라.
 //	
@@ -14,8 +14,9 @@ public class MessageFormatTest {
 	public static void main(String[] args) {
 		Object[][] data = { { "세종대왕", 1, "조선" }, { "오바마", 2, "미국" }, { "징기스칸", 3, "몽고" } };
 
+		System.out.printf("번호\t이름\t\t국적\n");
 		for (Object[] k : data) {
-			System.out.println(MessageFormat.format("이름 : {0}\t번호 : {1}\t국적 : {2}", k));
+			System.out.println(MessageFormat.format("{1}\t{0}\t{2}", k));
 
 		}
 

@@ -14,20 +14,20 @@ public class StringTokenizerTest {
 //	정렬된 토큰 : Empty, make, most, sound., the, vessels,
 	public static void main(String[] args) {
 		String s = "Empty vessels make the most sound.";
-		
-		StringTokenizer st = new StringTokenizer(s," ");
+
+		StringTokenizer st = new StringTokenizer(s, " ");
 		String[] arr = new String[st.countTokens()];
-		
-		for (int i = 0 ;i < arr.length; i++)
-			arr[i] = st.nextToken();
-			
-		Arrays.sort(arr);
-		
+
 		System.out.println("입력 : " + s);
 		System.out.println("단어 개수 : " + st.countTokens());
-		for (int i = 0 ;i < arr.length; i++) 
+		for (int i = 0; i < arr.length; i++)
+			arr[i] = st.nextToken();
+
+		Arrays.sort(arr);
+
+		for (int i = 0; i < arr.length; i++)
 			System.out.print(arr[i] + " ");
-		
+
 	}
 
 }

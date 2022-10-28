@@ -11,7 +11,7 @@ public class EnglishScoreTest {
 	static <T> T findScore(T[] a, String name) {
 		T score = null;
 		for (int i = 0; i < a.length; i++) {
-			if (a[i].toString().substring(0, 4) == name) {
+			if (a[i].toString().substring(0, 3).equals(name)) {
 				score = a[i];
 				break;
 			}
@@ -38,18 +38,15 @@ public class EnglishScoreTest {
 
 		System.out.println("영어 최고 점수 : " + findBest(ea));
 		System.out.println("수학 최고 점수 : " + findBest(ma));
-
 		// args에 이름이 없을 때 예외 처리 코드
-//		try {
-//			name = args[0];
-//
-//		} catch (NullPointerException e) {
-//			System.out.println("명령행 인자가 없습니다.");
-//		}
+		try {
+			name = args[0];
+			System.out.println("영어		점수 : " + findScore(ea, name));
+			System.out.println("수학		점수 : " + findScore(ma, name));
 
-		System.out.println("영어		점수 : " + findScore(ea, name));
-		System.out.println("수학		점수 : " + findScore(ma, name));
-
+		} catch (Exception e) {
+			System.out.println("명령행 인자가 없습니다.");
+		}
 	}
 
 }
